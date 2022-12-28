@@ -4,3 +4,6 @@
 [submodule "wordpress/wp-content/plugins/wp-oauth-POST"]
 	path = wordpress/wp-content/plugins/wp-oauth-POST
 	url = git@github.com:liquidloose/wp-oauth-POST.git
+[submodule "wordpress/wp-content/plugins/wp-endpoint-dashboard-writer"]
+	path = wordpress/wp-content/plugins/wp-endpoint-dashboard-writer
+	url = git@github.com:liquidloose/wp-endpoint-dashboard-writer.git
