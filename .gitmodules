@@ -4,3 +4,6 @@
 [submodule "wordpress/wp-content/plugins/wp-oauth-POST"]
 	path = wordpress/wp-content/plugins/wp-oauth-POST
 	url = https://github.com/liquidloose/wp-oauth-POST.git
+[submodule "wordpress/wp-content/plugins/wp-api-test"]
+	path = wordpress/wp-content/plugins/wp-api-test
+	url = https://github.com/liquidloose/wp-api-test.git
