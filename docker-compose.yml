@@ -1,0 +1,39 @@
+version: "3.9"
+ 
+services:
+  db:
+    image: mysql:8.0.23
+    ports:
+      - 3306:3306
+      - 443:443
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: this-is-the-mysql-root-user-password
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: this-is-the-wordpress-user-password
+ 
+  wordpress:
+    depends_on:
+      - db
+    image: liquidloose/wordpress-image
+    ports:
+      - 8082:80
+    restart: always
+    extra_hosts:
+      - "api.wordpress.org:198.143.164.251"
+      - "downloads.wordpress.org:198.143.164.250"
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: this-is-the-wordpress-user-password
+    volumes:
+      - type: bind
+        source: /home/ron/development/wordpress/ibl_site_1/wordpress
+        target: /var/www/html/
+ 
+volumes:
+  db_data: {}
