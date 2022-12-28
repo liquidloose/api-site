@@ -1,0 +1,6 @@
+[submodule "wordpress/wp-content/plugins/wp-api-test"]
+	path = wordpress/wp-content/plugins/wp-api-test
+	url = git@github.com:liquidloose/wp-api-test.git
+[submodule "wordpress/wp-content/plugins/wp-oauth-POST"]
+	path = wordpress/wp-content/plugins/wp-oauth-POST
+	url = git@github.com:liquidloose/wp-oauth-POST.git
